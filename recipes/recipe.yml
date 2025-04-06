@@ -27,28 +27,28 @@ modules:
       - micro
       - starship
       - hyprland
-      - xdg-desktop-portal-hyprland
-      - hyprpaper
-      - hyprctl
-      - alacritty
-      - vim
-      - firefox
-      - NetworkManager
-      - network-manager-applet
-      - sddm
-      - waybar
-      - dunst
-      - grim
-      - slurp
-      - mpv
-      - pipewire-pulseaudio # Or just pipewire
-      - polkit-gnome
-      - gnome-keyring
-      - sudo
-      - distrobox
-      - fastfetch
-      - gum
-      - just
+#      - xdg-desktop-portal-hyprland
+#      - hyprpaper
+#      - hyprctl
+#      - alacritty
+#      - vim
+#      - firefox
+#      - NetworkManager
+#      - network-manager-applet
+#      - sddm
+#      - waybar
+#      - dunst
+#      - grim
+#      - slurp
+#      - mpv
+#      - pipewire-pulseaudio # Or just pipewire
+#      - polkit-gnome
+#      - gnome-keyring
+#      - sudo
+#      - distrobox
+#      - fastfetch
+#      - gum
+#      - just
 #    remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
