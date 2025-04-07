@@ -31,7 +31,7 @@ modules:
 #      - hyprpaper
 #      - hyprctl
 #      - alacritty
-#      - vim
+      - vim
 #      - firefox
 #      - NetworkManager
 #      - network-manager-applet
@@ -45,10 +45,11 @@ modules:
 #      - polkit-gnome
 #      - gnome-keyring
 #      - sudo
-#      - distrobox
-#      - fastfetch
-#      - gum
-#      - just
+      - distrobox
+      - fastfetch
+      - gum
+      - just
+      - waybar
 #    remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
