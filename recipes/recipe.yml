@@ -32,11 +32,11 @@ modules:
 #      - hyprctl
 #      - alacritty
       - vim
-#      - firefox
+      - firefox
 #      - NetworkManager
 #      - network-manager-applet
 #      - sddm
-#      - waybar
+      - waybar
 #      - dunst
 #      - grim
 #      - slurp
