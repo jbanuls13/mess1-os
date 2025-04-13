@@ -28,8 +28,8 @@ modules:
       - starship
       - hyprland
 #      - xdg-desktop-portal-hyprland
-#      - hyprpaper
-      - hyprctl
+      - hyprpaper
+#      - hyprctl
 #      - alacritty
       - vim
       - firefox
