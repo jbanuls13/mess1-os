@@ -37,19 +37,19 @@ modules:
       - network-manager-applet
 #      - sddm
       - waybar
-#      - dunst
-#      - grim
-#      - slurp
-#      - mpv
-#      - pipewire-pulseaudio # Or just pipewire
-#      - polkit-gnome
-#      - gnome-keyring
-#      - sudo
+#  YA ESTA    - dunst
+      - grim
+#  YA ESTA    - slurp
+      - mpv
+#  YA ESTA    - pipewire-pulseaudio # Or just pipewire
+      - polkit-gnome
+      - gnome-keyring
+#  YA ESTA    - sudo
       - distrobox
       - fastfetch
       - gum
       - just
-      - dmenu
+#      - dmenu
       - dolphin
 #    remove:
       # example: removing firefox (in favor of the flatpak)
