@@ -28,7 +28,7 @@ modules:
       - starship
       - hyprland
 #      - xdg-desktop-portal-hyprland
-      - hyprpaper
+#      - hyprpaper
       - hyprctl
 #      - alacritty
       - vim
