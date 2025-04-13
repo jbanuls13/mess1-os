@@ -42,8 +42,8 @@ modules:
 #  YA ESTA    - slurp
       - mpv
 #  YA ESTA    - pipewire-pulseaudio # Or just pipewire
-      - polkit-gnome
-#      - gnome-keyring
+#      - polkit-gnome
+      - gnome-keyring
 #  YA ESTA    - sudo
       - distrobox
       - fastfetch
