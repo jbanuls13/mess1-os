@@ -29,12 +29,12 @@ modules:
       - hyprland
 #      - xdg-desktop-portal-hyprland
       - hyprpaper
-#      - hyprctl
+#  YA ESTA    - hyprctl
 #      - alacritty
       - vim
       - firefox
-#      - NetworkManager
-#      - network-manager-applet
+      - NetworkManager
+      - network-manager-applet
 #      - sddm
       - waybar
 #      - dunst
@@ -50,6 +50,7 @@ modules:
       - gum
       - just
       - dmenu
+      - dolphin
 #    remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
