@@ -67,6 +67,19 @@ modules:
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+    
   - type: script
     #snippets:
     #  - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
