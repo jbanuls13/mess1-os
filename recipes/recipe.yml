@@ -52,6 +52,14 @@ modules:
 #      - dmenu
       - dolphin
       - cockpit
+      - cockpit-files
+      - cockpit-machines
+      - cockpit-networkmanager
+      - cockpit-ostree
+      - cockpit-podman
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system 
 #      - cockpit-tailscale
 #    remove:
       # example: removing firefox (in favor of the flatpak)
