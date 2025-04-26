@@ -20,6 +20,6 @@ echo 'eval "$(starship init bash)"' >> /etc/bashrc
 
 # cockpit and extensions
 rpm-ostree install fastfetch
-#echo 'fastfetch' >> /etc/bashrc
+#echo 'fastfetch' >> /etc/profile
 
 echo Done
