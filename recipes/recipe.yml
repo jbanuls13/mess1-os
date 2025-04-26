@@ -49,6 +49,7 @@ modules:
       - fastfetch
       - gum
       - just
+      - fzf
 #      - dmenu
       - dolphin
       - cockpit
@@ -79,13 +80,6 @@ modules:
       google-fonts:
         - Roboto
         - Open Sans
-    
-  - type: script
-    #snippets:
-    #  - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
-    #  - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
-    scripts:
-      - JBSetup.sh # example: run config/scripts/myscript.sh
       
     #  - type: default-flatpaks
     #    notify: true # Send notification after install/uninstall is finished (true/false)
@@ -99,6 +93,18 @@ modules:
     #      remove:
             #- org.gnome.eog
     #    user: {} # Also add Flathub user repo, but no user packages
+
+  - type: files
+    files:
+      - source: system/usr   # copies `files/system/*` (* means everything inside it) into your image's root folder `/`
+        destination: /usr/local/bin
+
+  - type: script
+    #snippets:
+    #  - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+    #  - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    scripts:
+      - JBSetup.sh # example: run config/scripts/myscript.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
