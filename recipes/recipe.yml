@@ -96,8 +96,8 @@ modules:
 
   - type: files
     files:
-      - source: system/var/usrlocal/bin   # copies `files/system/*` (* means everything inside it) into your image's root folder `/`
-        destination: /var/usrlocal/bin 
+      - source: system/var/usrlocal/bin
+        destination: /
 
   - type: script
     #snippets:
