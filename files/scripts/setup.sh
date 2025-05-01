@@ -17,7 +17,7 @@ echo 'Setup Script'
 #install -c -m 0755 /tmp/starship /usr/bin
 # shellcheck disable=SC2016
 echo 'eval "$(starship init bash)"' >> /etc/bashrc
-echo 'export $PATH:/usr/share/setup-scripts' >> /etc/bashrc
+echo 'export PATH=$PATH:/usr/share/setup-scripts' >> /etc/bashrc
 chmod a+x /usr/share/setup-scripts/sysctl-manager
 #echo 'uname -a' >> /etc/bashrc
 
