@@ -1,3 +1,3 @@
-#!/bin/bash                                                                                                                                                                                                       │
-                                                                                                                                                                                                              │
-just -f /usr/local/bin/sysctl-manager.just "$@" 
+#!/bin/bash
+
+just -f /usr/share/setup-scripts/sysctl-manager.just "$@" 
