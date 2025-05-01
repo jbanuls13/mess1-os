@@ -17,13 +17,13 @@ echo 'Setup Script'
 #install -c -m 0755 /tmp/starship /usr/bin
 # shellcheck disable=SC2016
 echo 'eval "$(starship init bash)"' >> /etc/bashrc
-echo 'uname -a' >> /etc/bashrc
+echo 'export $PATH:/usr/share/setup-scripts' >> /etc/bashrc
+chmod a+x /usr/share/setup-scripts/sysctl-manager
+#echo 'uname -a' >> /etc/bashrc
 
 # cockpit and extensions
 #rpm-ostree install fastfetch
 #echo 'fastfetch' >> /etc/profile
 
-echo 'export $PATH:/usr/share/setup-scripts' >> /etc/profile
-echo 'uname -a' >> /etc/profile
 
 echo Done
