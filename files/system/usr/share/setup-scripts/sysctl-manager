@@ -1,3 +1,4 @@
 #!/bin/bash
 
+echo "system manager"
 just -f /usr/share/setup-scripts/sysctl-manager.just "$@" 
