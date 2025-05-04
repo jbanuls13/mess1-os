@@ -20,27 +20,6 @@ modules:
       - source: system
         destination: /
 
-  - type: rpm-ostree
-    install:
-      - micro
-      - hyprland
-      - hyprpaper
-      - vim
-      - firefox
-      - NetworkManager
-      - network-manager-applet
-#      - sddm
-      - waybar
-      - grim
-      - mpv
-      - gnome-keyring
-      - distrobox
-      - fastfetch
-      - gum
-      - just
-      - fzf
-      - dolphin
-
   - type: script
     scripts:
       - setup.sh # example: run config/scripts/myscript.sh
