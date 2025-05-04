@@ -15,6 +15,11 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
@@ -22,21 +27,30 @@ modules:
       - micro
       - starship
       - hyprland
+#      - xdg-desktop-portal-hyprland
       - hyprpaper
+#  YA ESTA    - hyprctl
+#      - alacritty
       - vim
       - firefox
       - NetworkManager
       - network-manager-applet
 #      - sddm
       - waybar
+#  YA ESTA    - dunst
       - grim
+#  YA ESTA    - slurp
       - mpv
+#  YA ESTA    - pipewire-pulseaudio # Or just pipewire
+#      - polkit-gnome
       - gnome-keyring
+#  YA ESTA    - sudo
       - distrobox
       - fastfetch
       - gum
       - just
       - fzf
+#      - dmenu
       - dolphin
       - cockpit
       - cockpit-files
@@ -54,13 +68,43 @@ modules:
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+      
+    #  - type: default-flatpaks
+    #    notify: true # Send notification after install/uninstall is finished (true/false)
+    #    system:
+    #      # If no repo information is specified, Flathub will be used by default
+    #      install:
+    #        #- org.mozilla.firefox
+    #        #- org.gnome.Loupe
+    #        - io.podman_desktop.PodmanDesktop
+    #        - io.github.flattool.Warehouse
+    #      remove:
+            #- org.gnome.eog
+    #    user: {} # Also add Flathub user repo, but no user packages
+
   - type: files
     files:
       - source: system
         destination: /
 
   - type: script
+    #snippets:
+      #- "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+    #  - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
     scripts:
       - setup.sh # example: run config/scripts/myscript.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
