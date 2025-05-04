@@ -1,4 +1,4 @@
-alias b := build
+alias b := help
  
 host := `uname -a`
 
