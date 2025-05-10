@@ -22,7 +22,7 @@ chmod a+x /usr/share/setup-scripts/sysctl-manager
 curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/share/setup-scripts
 #echo 'uname -a' >> /etc/bashrc
 rpm-ostree install fastfetch tmux tree \
-	fzf gum \
+	fzf gum htop \
 	distrobox vim grim dunst \
 	cockpit cockpit-files cockpit-machines cockpit-networkmanager \
 	cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system  \
