@@ -26,7 +26,7 @@ rpm-ostree install fastfetch \
 	distrobox vim grim dunst \
 	cockpit cockpit-files cockpit-machines cockpit-networkmanager \
 	cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system  \
-	micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin lynis 
+	micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin lynis spice-vdagent 
 # hyprctl
 #      - xdg-desktop-portal-hyprland
 #      - alacritty
