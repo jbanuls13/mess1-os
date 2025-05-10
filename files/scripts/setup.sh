@@ -20,7 +20,7 @@ echo 'eval "$(starship init bash)"' >> /etc/bashrc
 echo 'export PATH=$PATH:/usr/share/setup-scripts' >> /etc/bashrc
 chmod a+x /usr/share/setup-scripts/sysctl-manager
 #echo 'uname -a' >> /etc/bashrc
-rpm-ostree install fastfetch just fzf gum #distrobox vim grim dunst 
+rpm-ostree install fastfetch #just fzf gum distrobox vim grim dunst 
 # cockpit cockpit-files cockpit-machines cockpit-networkmanager cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin 
 # hyprctl
 #      - xdg-desktop-portal-hyprland
