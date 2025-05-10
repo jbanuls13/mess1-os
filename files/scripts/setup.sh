@@ -21,7 +21,7 @@ echo 'export PATH=$PATH:/usr/share/setup-scripts' >> /etc/bashrc
 chmod a+x /usr/share/setup-scripts/sysctl-manager
 curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/share/setup-scripts
 #echo 'uname -a' >> /etc/bashrc
-rpm-ostree install fastfetch \
+rpm-ostree install fastfetch tree \
 	fzf gum \
 	distrobox vim grim dunst \
 	cockpit cockpit-files cockpit-machines cockpit-networkmanager \
