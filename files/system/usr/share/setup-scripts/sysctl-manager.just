@@ -4,7 +4,6 @@ host := `uname -a`
 
 # build main
 help:
-    echo {{host}}
     echo "Pasos para actualizar el sistema"
     echo "  sysctl-manager rebase1"
     echo "  systemctl reboot"
@@ -23,4 +22,7 @@ rebase2:
 
 update:
     echo "Actualizando sistema"
-    echo "rpm-ostree update"
+    rpm-ostree update
+
+hyprconfig:
+    cp /usr/share/setup-scripts/config $HOME/.config
