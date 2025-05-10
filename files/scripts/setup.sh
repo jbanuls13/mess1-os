@@ -19,16 +19,19 @@ install -c -m 0755 /tmp/starship /usr/bin
 echo 'eval "$(starship init bash)"' >> /etc/bashrc
 echo 'export PATH=$PATH:/usr/share/setup-scripts' >> /etc/bashrc
 chmod a+x /usr/share/setup-scripts/sysctl-manager
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/share/setup-scripts
 #echo 'uname -a' >> /etc/bashrc
 rpm-ostree install fastfetch \
-	just \
-	#fzf gum \
-#distrobox vim grim dunst 
-# cockpit cockpit-files cockpit-machines cockpit-networkmanager cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin 
+	fzf gum \
+	distrobox vim grim dunst \
+	cockpit cockpit-files cockpit-machines cockpit-networkmanager \
+	cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system  \
+	micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin 
 # hyprctl
 #      - xdg-desktop-portal-hyprland
 #      - alacritty
 #      - sddm
+	# just \
 
 #echo 'fastfetch' >> /etc/bashrc
 
