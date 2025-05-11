@@ -20,6 +20,19 @@ modules:
       - source: system
         destination: /
 
+ - type: fonts
+   fonts:
+      nerd-fonts:              
+        - FiraCode # don't add 
+        - Hack                 
+        - SourceCodePro        
+        - Terminus             
+        - JetBrainsMono        
+        - NerdFontsSymbolsOnly 
+      google-fonts:            
+        - Roboto               
+        - Open Sans            
+
   - type: script
     scripts:
       - setup.sh # example: run config/scripts/myscript.sh
