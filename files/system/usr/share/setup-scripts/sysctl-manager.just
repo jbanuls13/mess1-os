@@ -4,11 +4,11 @@ host := `uname -a`
 
 # build main
 help:
-    echo "Pasos para actualizar el sistema"
-    echo "  sysctl-manager rebase1"
-    echo "  systemctl reboot"
-    echo "  sysctl-manager rebase2"
-    echo "  systemctl reboot"
+    @echo "Pasos para actualizar el sistema"
+    @echo "  sysctl-manager rebase1"
+    @echo "  systemctl reboot"
+    @echo "  sysctl-manager rebase2"
+    @echo "  systemctl reboot"
 
 test TEST1F:
     ls {{TEST1F}}
