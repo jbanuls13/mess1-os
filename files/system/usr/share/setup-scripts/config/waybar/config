@@ -1,5 +1,106 @@
 {
+    "layer": "top",
+    "position": "top",
+    "height": 30, // Adjust as needed
     "modules-left": [
-        "hyprland/workspaces"
-    ]
+        "custom/hyprland_logo", // Example: You might have a Hyprland logo
+        "wlr/workspaces",
+        "network"
+    ],
+    "modules-center": [
+        "clock",
+        "pulseaudio",
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "battery",
+        "memory",
+        "cpu",
+        "temperature"
+    ],
+    "custom/hyprland_logo": {
+        "format": "󰻀", // Example icon, you can customize this
+        "on-click": "kitty --class floating-terminal sh -c 'neofetch --stdout | wofi -dmenu -i -p \"System Info:\"'"
+    },
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "default": "●"
+        },
+        "on-click": "hyprctl dispatch workspace {name}"
+    },
+    "network": {
+        "interface": "wlan0", // Replace with your network interface
+        "format-wifi": "直 {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nFrequency: {frequency} MHz\nIP: {ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y-%m-%d %A}</big>\n<tt>{:%H:%M:%S %Z%z}</tt>"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "handsfree": "",
+            "speaker": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-disconnected": " Disconnected",
+        "format-off": " Off",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "memory": {
+        "format": " {used:0.1f}GiB/{total:0.1f}GiB ({percentage:.0f}%)",
+        "tooltip": "RAM: {used:0.1f}GiB ({percentage:.0f}%)\nSwap: {swapUsed:0.1f}GiB/{swapTotal:0.1f}GiB ({swapPercentage:.0f}%)"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": "Load: {load1} {load5} {load15}"
+    },
+    "temperature": {
+        "format": "🌡️ {temperatureC}°C",
+        "tooltip": "{temperatureC}°C",
+        "critical-threshold": 80
+    }
 }
