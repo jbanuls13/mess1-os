@@ -26,3 +26,8 @@ update:
 
 hyprconfig:
     cp /usr/share/setup-scripts/config $HOME/.config
+
+add-zellij:
+    /usr/share/setup-scripts/install_zellij.sh
+
+
