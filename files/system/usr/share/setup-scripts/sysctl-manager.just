@@ -30,4 +30,10 @@ hyprconfig:
 add-zellij:
     /usr/share/setup-scripts/install_zellij.sh
 
+add-video-service:
+    sudo useradd -r -s /sbin/nologin -U gerbera
+    sudo cp /usr/share/setup-scripts/servicios/container-gerbera.service /var/home/gerbera/.config/systemd/user
+    sudo -u gerbera systemctl --user enable container-gerbera.service
+    sudo -u gerbera systemctl --user daemon-reload
+    sudo -u gerbera systemctl --user start container-gerbera.service 
 
