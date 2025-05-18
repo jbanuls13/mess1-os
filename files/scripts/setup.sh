@@ -26,8 +26,8 @@ rpm-ostree install fastfetch tmux tree \
 	distrobox vim grim dunst \
 	cockpit cockpit-files cockpit-machines cockpit-networkmanager \
 	cockpit-ostree cockpit-podman cockpit-selinux cockpit-storaged cockpit-system  \
-	micro hyprland hyprpaper firefox NetworkManager network-manager-applet waybar mpv dolphin \
-	lynis spice-vdagent \
+	micro hyprland firefox NetworkManager network-manager-applet waybar mpv dolphin \
+	lynis spice-vdagent bc \
 	adobe-source-code-pro-fonts cascadia-code-nf-fonts cascadia-mono-nf-fonts google-droid-sans-mono-fonts google-go-mono-fonts google-roboto-condensed-fonts google-roboto-fonts google-roboto-mono-fonts google-roboto-slab-fonts ibm-plex-mono-fonts jetbrains-mono-fonts-all mozilla-fira-mono-fonts powerline-fonts rsms-inter-fonts
 
 # hyprctl
