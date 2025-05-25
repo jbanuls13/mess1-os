@@ -30,6 +30,10 @@ hyprconfig:
 add-zellij:
     /usr/share/setup-scripts/install_zellij.sh
 
+add-admin-usr:
+    sudo useradd -m -G wheel -s /bin/bash admin
+    sudo passwd admin
+
 add-video-service:
     sudo useradd -r -s /sbin/nologin -U gerbera
     sudo cp /usr/share/setup-scripts/servicios/container-gerbera.service /var/home/gerbera/.config/systemd/user
