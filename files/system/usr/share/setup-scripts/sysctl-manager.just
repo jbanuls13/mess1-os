@@ -34,10 +34,19 @@ add-admin-usr:
     sudo useradd -m -G wheel -s /bin/bash admin
     sudo passwd admin
 
+del-video-service:
+    sudo userdel gerbera
+    sudo rm -rf /var/home/gerbera
+    echo "Falta eliminar servicio systemd"
+
 add-video-service:
-    sudo useradd -r -s /sbin/nologin -U gerbera
+    sudo useradd -m -s /sbin/nologin gerbera
+    sudo mkdir -p /var/home/gerbera/.config/systemd/user
     sudo cp /usr/share/setup-scripts/servicios/container-gerbera.service /var/home/gerbera/.config/systemd/user
+    sudo chown -R gerbera:gerbera /var/home/gerbera/
     sudo -u gerbera systemctl --user enable container-gerbera.service
     sudo -u gerbera systemctl --user daemon-reload
     sudo -u gerbera systemctl --user start container-gerbera.service 
 
+pending:
+    echo "buddybox"
