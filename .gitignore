@@ -1,3 +1,4 @@
+*.swp
 cosign.key
 cosign.private
 /Containerfile
