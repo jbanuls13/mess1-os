@@ -9,7 +9,7 @@ description: This is my personal OS image.
 #base-image: ghcr.io/ublue-os/silverblue-main
 # KO base-image: quay.io/fedora/fedora-coreos:stable
 base-image: quay.io/fedora/fedora-coreos
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: 41.20250331.3.0 # latest is also supported if you want new updates ASAP
 #base-image: ghcr.io/ublue-os/ucore-minimal
 #image-version: stable # latest is also supported if you want new updates ASAP
 #image-version: latest # latest is also supported if you want new updates ASAP
