@@ -23,7 +23,7 @@ ExecStart=/usr/bin/podman run \
 	-d \
 	--security-opt label=disable \
 	--network=host \
-	-v /var/home/jbanuls/Imágenes/Familia:/mnt/content:ro gerbera/gerbera:2.5.0
+	-v /var/home/gerbera/photos:/mnt/content:ro gerbera/gerbera:2.5.0
 ExecStop=/usr/bin/podman stop \
 	--ignore -t 10 \
 	--cidfile=%t/%n.ctr-id

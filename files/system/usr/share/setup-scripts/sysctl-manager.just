@@ -42,6 +42,7 @@ del-video-service:
 add-video-service:
     sudo useradd -m -s /sbin/nologin gerbera
     sudo mkdir -p /var/home/gerbera/.config/systemd/user
+    sudo mkdir -p /var/home/gerbera/photos
     sudo cp /usr/share/setup-scripts/servicios/container-gerbera.service /var/home/gerbera/.config/systemd/user
     sudo chown -R gerbera:gerbera /var/home/gerbera/
     sudo -u gerbera systemctl --user enable container-gerbera.service
