@@ -35,19 +35,30 @@ add-admin-usr:
     sudo passwd admin
 
 del-video-service:
-    sudo userdel gerbera
-    sudo rm -rf /var/home/gerbera
+    sudo loginctl disable-linger gerbera
+    sudo userdel -r gerbera
     echo "Falta eliminar servicio systemd"
 
 add-video-service:
-    sudo useradd -m -s /sbin/nologin gerbera
+    #sudo useradd -m -s /sbin/nologin gerbera
+    #sudo systemctl disable user@1007
+    sudo loginctl disable-linger gerbera
+    sudo userdel -r gerbera
+    sudo useradd -m -s /bin/bash gerbera
+    sudo passwd gerbera
     sudo mkdir -p /var/home/gerbera/.config/systemd/user
     sudo mkdir -p /var/home/gerbera/photos
     sudo cp /usr/share/setup-scripts/servicios/container-gerbera.service /var/home/gerbera/.config/systemd/user
     sudo chown -R gerbera:gerbera /var/home/gerbera/
+    sudo loginctl enable-linger gerbera
+    sudo -u gerbera podman pull docker.io/gerbera/gerbera:2.5.0
     sudo -u gerbera systemctl --user enable container-gerbera.service
-    sudo -u gerbera systemctl --user daemon-reload
     sudo -u gerbera systemctl --user start container-gerbera.service 
+
+    #sudo loginctl enable-linger gerbera
+    #sudo runuser -l gerbera -c 'dbus-launch systemctl --user enable container-gerbera.service'
+    #export XDG_RUNTIME_DIR=/run/user/$(id -u gerbera)
+    #export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
 
 pending:
     echo "buddybox"
