@@ -25,7 +25,7 @@ update:
     rpm-ostree update
 
 hyprconfig:
-    cp -r /usr/share/setup-scripts/config $HOME/.config
+    cp -r /usr/share/setup-scripts/config/* $HOME/.config
 
 add-zellij:
     /usr/share/setup-scripts/install_zellij.sh
